@@ -1,0 +1,175 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Fundo escuro para toda a tela */
+  color: #fff;
+  overflow-y: scroll; /* Permite rolagem vertical */
+}
+
+/* Remove qualquer espaço ou faixa ao redor do container */
+.container {
+  margin: 0; /* Remove margens externas */
+  padding: 0; /* Remove preenchimento externo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between; /* Espaço entre logo e ícone */
+  align-items: center; /* Alinha verticalmente ao centro do header */
+  padding: 0 2rem; /* Espaçamento lateral */
+  height: 100px; /* Altura fixa do header para controle de layout */
+  position: relative; /* Garantia de controle sobre o posicionamento interno */
+}
+
+/* Estilo para a logo */
+.logo {
+  width: 250px; /* Tamanho proporcional ao layout */
+  height: auto; /* Mantém a proporção original */
+  object-fit: contain; /* Garante que a imagem seja exibida corretamente */
+  margin-left: -80px; /* Move a logo para a esquerda */
+}
+
+/* Estilo para o ícone do menu */
+.menu-icon {
+  width: 45px; /* Tamanho exato do ícone */
+  height: 45px; /* Tamanho exato do ícone */
+  cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1; /* Faz o conteúdo principal ocupar espaço restante */
+  text-align: center;
+  padding: 2rem;
+  background-color: #121212; /* Garante fundo escuro na área principal */
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start; /* Alinha os botões à esquerda */
+  gap: 1rem;
+  padding-left: 3rem; /* Adiciona um espaçamento para empurrar os botões mais para a esquerda */
+}
+
+.primary-button,
+.secondary-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid white; /* Borda branca */
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  background-color: #52187B; /* Botões roxos */
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  background-color: #52187B; /* Alteração de cor ao passar o mouse */
+}
+
+/* Texto dos Planos Acessíveis */
+.side-content {
+  text-align: left; /* Alinhar o texto à esquerda */
+  padding: 2rem 3rem; /* Ajuste de padding para ficar bem posicionado */
+  background-color: transparent; /* Remove o fundo cinza claro */
+  color: #121212;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Alinha à esquerda */
+  margin-left: 2rem; /* Dá espaçamento entre os botões e o texto */
+}
+
+.side-content h3 {
+  font-size: 1.5rem;
+  color: #121212;
+  margin-bottom: 1rem;
+}
+
+.side-content p {
+  font-size: 1rem;
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+  margin-bottom: 1.5rem;
+}
+
+/* Rodapé */
+.footer {
+  display: flex;
+  justify-content: space-around; /* Distribui igualmente as colunas */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  background-color: #52187B; /* Fundo roxo no rodapé */
+  padding: 0.5rem 1rem; /* Ajuste de espaçamento */
+  flex-wrap: wrap; /* Permite que as colunas se ajustem em telas menores */
+  gap: 2rem; /* Espaço entre colunas */
+}
+
+/* Títulos do rodapé */
+.footer h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #121212;
+}
+
+/* Links no rodapé */
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  text-decoration: none; /* Remove sublinhado padrão */
+  color: #fff; /* Cor branca para os links */
+  cursor: pointer;
+  transition: color 0.2s ease; /* Animação ao passar o mouse */
+}
+
+.footer ul li a:hover {
+  color: #121212; /* Muda para cinza claro ao passar o mouse */
+}
+
+/* Estilo para ícones sociais */
+.social-icons img {
+  width: 50px; /* Define o tamanho dos ícones */
+  height: 50px; /* Define o tamanho dos ícones */
+  object-fit: center; /* Garante que a imagem se ajuste corretamente ao espaço do ícone */
+  margin-right: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1); /* Efeito de aumentar um pouco no hover */
+}
+
+/* Ajuste para responsividade */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Coloca colunas em bloco */
+    align-items: center; /* Centraliza os itens */
+  }
+  .footer ul {
+    text-align: center; /* Centraliza os textos em telas pequenas */
+  }
+}
